@@ -39,7 +39,7 @@ else:
 if st.button('Classify'):
     # This example uses a fixed classification result.
     # You can replace this part with your actual model prediction logic.
-    pipe = pipeline("image-classification", model="dima806/deepfake_vs_real_image_detection")
+    pipe = pipeline("image-classification", model="dima806/deepfake_vs_real_image_detection", device=-1)
     
     if uploaded_image is not None:
         classification_results = pipe(image)
